@@ -6,7 +6,3 @@ result-*
 *.swp
 *~
 .DS_Store
-
-# Optional: If you use sops-nix or agenix for secrets
-# keys.txt
-# .env
