@@ -14,6 +14,8 @@
             canTouchEfiVariables = true;
             efiSysMountPoint = "/boot";
         };
+
+        timeout = 10;
     };
 
     boot.kernelPackages = pkgs.linuxPackages_latest;
