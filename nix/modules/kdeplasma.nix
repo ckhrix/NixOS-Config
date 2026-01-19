@@ -1,6 +1,15 @@
 { pkgs, ... }: {
-    services.displayManager.sddm.enable = true;
     services.desktopManager.plasma6.enable = true;
+    services.displayManager.sddm = {
+        enable = true;
+        theme = "sddm-astronaut-theme";
+        extraPackages = with pkgs; [
+            sddm-astronaut
+            kdePackages.qtsvg
+            kdePackages.qtmultimedia
+            kdePackages.qtvirtualkeyboard
+        ];
+    };
 
     services.xserver.enable = true;
     services.xserver.xkb = {
@@ -28,7 +37,7 @@
         kdePackages.kate
         kdePackages.konsole
         kdePackages.dolphin
-        kdePackages.sddm-kcm
+        sddm-astronaut
     ];
 
     environment.plasma6.excludePackages = with pkgs.kdePackages; [
