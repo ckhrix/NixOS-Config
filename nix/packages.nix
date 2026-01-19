@@ -25,6 +25,7 @@
     ungoogled-chromium
     lutris
     protontricks
+    strawberry
 
     # Creative
     cameractrls
