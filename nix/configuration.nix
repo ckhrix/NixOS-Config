@@ -18,7 +18,6 @@
     };
   };
 
-
   networking.hostName = "nixos"; # If you change this, change flake.nix and home.nix too
 
   users.users.ckhrix = {

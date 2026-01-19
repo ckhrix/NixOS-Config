@@ -1,5 +1,6 @@
 {
     imports = [
+        ./modules/openrgbconf.nix
         ./modules/audio.nix
         ./modules/boot/bootloader.nix
         ./modules/locale.nix
