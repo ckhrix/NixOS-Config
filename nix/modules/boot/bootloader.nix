@@ -7,6 +7,7 @@
             device = "nodev";
             efiSupport = true;
             useOSProber = true;
+            theme = ./hyperfluent-nixos;
         };
 
         efi = {
