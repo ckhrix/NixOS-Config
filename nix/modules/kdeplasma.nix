@@ -28,6 +28,7 @@
         kdePackages.kate
         kdePackages.konsole
         kdePackages.dolphin
+        kdePackages.sddm-kcm
     ];
 
     environment.plasma6.excludePackages = with pkgs.kdePackages; [
