@@ -7,7 +7,17 @@
       inputs.home-manager.nixosModules.default
     ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix = {
+    settings.experimental-features = [ "nix-command" "flakes" ];
+
+    settings.auto-optimise-store = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-generations +10";
+    };
+  };
+
 
   networking.hostName = "nixos"; # If you change this, change flake.nix and home.nix too
 
