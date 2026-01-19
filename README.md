@@ -13,3 +13,5 @@ nix flake update
 rebuildnix
 ```
 (rebuildnix is an alias for "sudo nixos-rebuild switch --flake /home/ckhrix/NixOS#nixos")
+
+GRUB Theme: https://github.com/Coopydood/HyperFluent-GRUB-Theme
