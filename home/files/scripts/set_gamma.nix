@@ -1,7 +1,7 @@
 {
 home.file."Scripts/set_gamma.sh" = {
     text = ''
-    #!/bin/bash
+    #!/usr/bin/env bash
 
     PRIMARY_MONITOR=$(xrandr --query | grep " primary" | awk '{print $1}')
 

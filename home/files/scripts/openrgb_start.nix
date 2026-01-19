@@ -1,7 +1,7 @@
 {
 home.file."Scripts/openrgb_start.sh" = {
     text = ''
-    #!/usr/bin/bash
+    #!/usr/bin/env bash
     # Wait for the GPU and SMBus drivers to fully load
     sleep 15
     # Force a hardware rescan to find all 9070 XT and RAM zones

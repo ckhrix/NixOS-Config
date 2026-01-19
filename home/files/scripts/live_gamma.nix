@@ -1,7 +1,7 @@
 {
 home.file."Scripts/live_gamma.sh" = {
     text = ''
-    #!/bin/bash
+    #!/usr/bin/env bash
 
     PRIMARY=$(xrandr --query | grep " primary" | awk '{print $1}')
 
