@@ -1,5 +1,7 @@
 {
     imports = [
+        ./files/configs/openrgbignorelist.nix
+
         ./files/desktopentries/osulazer.nix
         ./files/desktopentries/livegammadesktop.nix
         ./files/desktopentries/setgammadesktop.nix
