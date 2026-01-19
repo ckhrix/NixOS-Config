@@ -5,6 +5,7 @@
   hardware.bluetooth.enable = true;
   services.printing.enable = true;
   programs.firefox.enable = true;
+  programs.steam.enable = true;
   services.hardware.openrgb.enable = true;
   hardware.opentabletdriver.enable = true;
   hardware.opentabletdriver.daemon.enable = true;
@@ -23,7 +24,6 @@
 
     # Gaming
     osu-lazer-bin
-    steam
     vesktop
     ungoogled-chromium
     lutris
