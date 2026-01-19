@@ -7,6 +7,20 @@
         layout = "dk";
         variant = "";
     };
+    services.xserver.config = ''
+    Section "Screen"
+        Identifier "asdf"
+        DefaultDepth 30
+    EndSection
+
+    Section "OutputClass"
+        Identifier "AMD"
+        MatchDriver "amdgpu"
+        Driver "amdgpu"
+        Option "EnablePageFlip" "off"
+        Option "TearFree" "false"
+    EndSection
+    '';
 
     environment.systemPackages = with pkgs; [
         kdePackages.kdenlive

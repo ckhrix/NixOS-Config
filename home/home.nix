@@ -1,6 +1,7 @@
 { config, pkgs, inputs, ... }: {
   imports = [
     ./git.nix
+    ./homebundle.nix
   ];
 
   programs.home-manager.enable = true;
