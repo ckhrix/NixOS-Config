@@ -5,6 +5,9 @@
   hardware.bluetooth.enable = true;
   services.printing.enable = true;
   programs.firefox.enable = true;
+  services.hardware.openrgb.enable = true;
+  hardware.opentabletdriver.enable = true;
+  hardware.opentabletdriver.daemon.enable = true;
 
   environment.systemPackages = with pkgs; [
     # System
@@ -26,6 +29,9 @@
     lutris
     protontricks
     strawberry
+    opentabletdriver
+    wootility
+    wooting-udev-rules
 
     # Creative
     cameractrls
