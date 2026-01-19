@@ -21,6 +21,9 @@
     lact
     openrgb
     qpwgraph
+    protonvpn-gui
+    qbittorrent
+    ddcutil
 
     # Gaming
     osu-lazer-bin
@@ -45,5 +48,15 @@
 
     # KDE Packages are under kdeplasma.nix
     # Sway Packages are under sway.nix
+  ];
+
+  fonts.packages = with pkgs; [
+    jetbrains-mono
+    noto-fonts
+    noto-fonts-color-emoji
+    twemoji-color-font
+    font-awesome
+    powerline-fonts
+    powerline-symbols
   ];
 }
