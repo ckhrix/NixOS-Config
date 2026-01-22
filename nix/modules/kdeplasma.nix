@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ config, pkgs, ... }: {
     services.desktopManager.plasma6.enable = true;
     services.displayManager.sddm = {
         enable = true;
@@ -11,25 +11,27 @@
         ];
     };
 
-    services.xserver.enable = true;
-    services.xserver.xkb = {
-        layout = "dk";
-        variant = "";
-    };
-    services.xserver.config = ''
-    Section "Screen"
-        Identifier "asdf"
-        DefaultDepth 30
-    EndSection
+    services.xserver = {
+        enable = true;
 
-    Section "OutputClass"
-        Identifier "AMD"
-        MatchDriver "amdgpu"
-        Driver "amdgpu"
-        Option "EnablePageFlip" "off"
-        Option "TearFree" "false"
-    EndSection
-    '';
+        videoDrivers = [ "amdgpu" ];
+        defaultDepth = 30;
+
+        xkb = {
+            layout = "dk";
+            variant = "";
+        };
+
+        extraConfig = ''
+        Section "OutputClass"
+            Identifier "AMD"
+            MatchDriver "amdgpu"
+            Driver "amdgpu"
+            Option "EnablePageFlip" "off"
+            Option "TearFree" "false"
+        EndSection
+        '';
+    };
 
     environment.systemPackages = with pkgs; [
         kdePackages.kdenlive

@@ -2,14 +2,18 @@
   nixpkgs.config.allowUnfree = true;
 
   networking.networkmanager.enable = true;
+
   hardware.bluetooth.enable = true;
-  services.printing.enable = true;
-  programs.firefox.enable = true;
-  programs.steam.enable = true;
-  services.hardware.openrgb.enable = true;
   hardware.opentabletdriver.enable = true;
   hardware.opentabletdriver.daemon.enable = true;
+  hardware.wooting.enable = true;
+
+  services.printing.enable = true;
+  services.hardware.openrgb.enable = true;
   services.lact.enable = true;
+
+  programs.firefox.enable = true;
+  programs.steam.enable = true;
 
   environment.systemPackages = with pkgs; [
     # System
