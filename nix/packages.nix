@@ -14,6 +14,7 @@
 
   programs.firefox.enable = true;
   programs.steam.enable = true;
+  programs.coolercontrol.enable = true;
 
   environment.systemPackages = with pkgs; [
     # System

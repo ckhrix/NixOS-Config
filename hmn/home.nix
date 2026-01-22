@@ -18,6 +18,7 @@
       rbnixdesk = "sudo nixos-rebuild switch --flake /home/ckhrix/NixOS#nixdesktop";
       rbnixlap = "sudo nixos-rebuild switch --flake /home/ckhrix/NixOS#nixlaptop";
       ff = "fastfetch";
+      helpnix = "man configuration.nix";
     };
   };
 }
