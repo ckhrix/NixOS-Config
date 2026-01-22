@@ -9,6 +9,6 @@
 
         ./files/scripts/live_gamma.nix
         ./files/scripts/set_gamma.nix
-        ./files/scripts/openrgb_start.nix
+        ./files/scripts/openrgb_start.nix # Create Red.orp and exclude unwanted devices first
     ];
 }

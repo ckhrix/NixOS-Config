@@ -9,6 +9,7 @@
   services.hardware.openrgb.enable = true;
   hardware.opentabletdriver.enable = true;
   hardware.opentabletdriver.daemon.enable = true;
+  services.lact.enable = true;
 
   environment.systemPackages = with pkgs; [
     # System
