@@ -19,5 +19,5 @@
     };
 
     boot.kernelPackages = pkgs.linuxPackages_latest;
-    boot.kernelModules = [ "i2c-dev" "i2c-piix4" ];
+    boot.kernelModules = [ "i2c-dev" "i2c-piix4" "i2c-i801" ];
 }
