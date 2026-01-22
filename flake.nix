@@ -16,8 +16,8 @@
     nixdesktop = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./nix/hosts/desktop/configuration.nix
-        ./nix/hosts/desktop/hardware-configuration.nix
+        ./nix/configuration.nix
+        ./nix/hosts/desktop/default.nix
         inputs.home-manager.nixosModules.default
       ];
     };
@@ -25,8 +25,8 @@
     nixlaptop = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./nix/hosts/laptop/configuration.nix
-        ./nix/hosts/laptop/hardware-configuration.nix
+        ./nix/configuration.nix
+        ./nix/hosts/laptop/default.nix
         inputs.home-manager.nixosModules.default
       ];
     };

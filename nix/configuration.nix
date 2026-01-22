@@ -1,7 +1,6 @@
 { config, pkgs, inputs, ... }: {
   imports =
     [
-      ./hardware-configuration.nix
       ./packages.nix
       ./bundle.nix
       inputs.home-manager.nixosModules.default
@@ -18,8 +17,6 @@
     };
   };
 
-  networking.hostName = "nixlaptop"; # If you change this, change flake.nix and home.nix too
-
   users.users.ckhrix = {
     isNormalUser = true;
     description = "ckhrix";
@@ -29,7 +26,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "ckhrix" = import ./../../../hmn/home.nix;
+      "ckhrix" = import ./../hmn/home.nix;
     };
   };
 
