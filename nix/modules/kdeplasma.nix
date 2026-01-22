@@ -47,7 +47,6 @@
         oxygen                     # Old icon/cursor theme
         elisa                      # Music player
         khelpcenter                # Help documentation
-        gwenview                   # Image viewer
         okular                     # PDF viewer
     ];
 }
