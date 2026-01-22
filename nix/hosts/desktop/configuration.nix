@@ -20,6 +20,12 @@
 
   networking.hostName = "nixdesktop"; # If you change this, change flake.nix and home.nix too
 
+  fileSystems."/mnt/sda" = {
+    device = "/dev/disk/by-uuid/beeac917-e404-4e35-9bf4-8353c3b24298";
+    fsType = "ext4";
+    options = [ "defaults" "nofail" ];
+  };
+
   users.users.ckhrix = {
     isNormalUser = true;
     description = "ckhrix";
