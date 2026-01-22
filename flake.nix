@@ -11,12 +11,26 @@
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
+  nixosConfigurations = {
+
+    nixdesktop = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
       modules = [
-        ./nix/configuration.nix
+        ./nix/hosts/desktop/configuration.nix
+        ./nix/hosts/desktop/hardware-configuration.nix
         inputs.home-manager.nixosModules.default
       ];
     };
+
+    nixlaptop = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
+      modules = [
+        ./nix/hosts/laptop/configuration.nix
+        ./nix/hosts/laptop/hardware-configuration.nix
+        inputs.home-manager.nixosModules.default
+      ];
+    };
+
   };
+};
 }

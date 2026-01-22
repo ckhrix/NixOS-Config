@@ -15,7 +15,8 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      rebuildnix = "sudo nixos-rebuild switch --flake /home/ckhrix/NixOS#nixos";
+      rbnixdesk = "sudo nixos-rebuild switch --flake /home/ckhrix/NixOS#nixdesktop";
+      rbnixlap = "sudo nixos-rebuild switch --flake /home/ckhrix/NixOS#nixlaptop";
       ff = "fastfetch";
     };
   };
