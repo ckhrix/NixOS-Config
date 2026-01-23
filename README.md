@@ -18,6 +18,6 @@ Then to update your computer run the following, remember to track changes to the
 nix flake update
 rbnixdesk
 ```
-(rbnixdesk is an alias for "sudo nixos-rebuild switch --flake /home/ckhrix/NixOS#nixdesktop")"
+(rbnixdesk is an alias for "sudo nixos-rebuild switch --flake /home/ckhrix/NixOS#nixdesktop")
 
 GRUB Theme: https://github.com/Coopydood/HyperFluent-GRUB-Theme
