@@ -24,6 +24,7 @@
     fastfetch
     coolercontrol.coolercontrold
     coolercontrol.coolercontrol-gui
+    lm_sensors
     lact
     openrgb
     qpwgraph
@@ -36,6 +37,7 @@
     vesktop
     ungoogled-chromium
     lutris
+    heroic
     protontricks
     strawberry
     opentabletdriver
