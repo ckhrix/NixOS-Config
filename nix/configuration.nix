@@ -15,6 +15,8 @@
       dates = "weekly";
       options = "--delete-generations +10";
     };
+
+    settings.download-buffer-size = 134217728; # 128MB
   };
 
   users.users.ckhrix = {
