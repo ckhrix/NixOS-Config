@@ -28,21 +28,20 @@
     };
   };
 
-  environment.systemPackages = [ pkgs.alsa-utils ];
-
-  systemd.user.services.keep-dac-awake = {
-    description = "Keep-alive silent signal for DAC";
-    after = [ "pipewire.service" ];
-    wantedBy = [ "default.target" ];
-
-    serviceConfig = {
-      # -t sine: plays a sine wave
-      # -f 1: frequency of 1Hz (well below human hearing range of 20Hz)
-      # -c 2: 2 channels (stereo)
-      # > /dev/null: suppress terminal output
-      ExecStart = "${pkgs.alsa-utils}/bin/speaker-test -t sine -f 1 -c 2";
-      Restart = "always";
-      RestartSec = 5;
+  services.pipewire.wireplumber.extraConfig = {
+    "10-disable-suspension" = {
+      "monitor.alsa.rules" = [
+        {
+          matches = [ { "node.name" = "~alsa_output.*"; } ];
+          actions = {
+            update-props = {
+              "session.suspend-timeout-seconds" = 0;
+              "dither.method" = "shaped5";
+              "dither.noise" = 12;
+            };
+          };
+        }
+      ];
     };
   };
 }

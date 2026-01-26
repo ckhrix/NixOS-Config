@@ -34,7 +34,7 @@
     };
 
     environment.systemPackages = with pkgs; [
-        #kdePackages.kdenlive
+        kdePackages.kdenlive
         kdePackages.filelight
         kdePackages.kate
         kdePackages.konsole
