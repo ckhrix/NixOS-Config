@@ -1,14 +1,20 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, inputs, ... }:
+let
+        stable = import inputs.nixpkgs-stable {
+            inherit (pkgs.stdenv.hostPlatform) system;
+            config.allowUnfree = true;
+        };
+in {
     services.desktopManager.plasma6.enable = true;
     services.displayManager.sddm = {
         enable = true;
-        theme = "sddm-astronaut-theme";
-        extraPackages = with pkgs; [
-            sddm-astronaut
-            kdePackages.qtsvg
-            kdePackages.qtmultimedia
-            kdePackages.qtvirtualkeyboard
-        ];
+        #theme = "sddm-astronaut-theme";
+        #extraPackages = with pkgs; [
+        #    sddm-astronaut
+        #    kdePackages.qtsvg
+        #    kdePackages.qtmultimedia
+        #    kdePackages.qtvirtualkeyboard
+        #];
     };
 
     services.xserver = {
@@ -34,13 +40,14 @@
     };
 
     environment.systemPackages = with pkgs; [
-        kdePackages.kdenlive
+        stable.kdePackages.kdenlive
         kdePackages.filelight
         kdePackages.kate
         kdePackages.konsole
         kdePackages.dolphin
-        sddm-astronaut
+        #sddm-astronaut
     ];
+
 
     environment.plasma6.excludePackages = with pkgs.kdePackages; [
         plasma-browser-integration # The browser extension bridge

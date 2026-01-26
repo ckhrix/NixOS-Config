@@ -1,4 +1,10 @@
-{ pkgs, ... }: {
+{ config, pkgs, inputs, ... }:
+let
+        stable = import inputs.nixpkgs-stable {
+            inherit (pkgs.stdenv.hostPlatform) system;
+            config.allowUnfree = true;
+        };
+in {
   nixpkgs.config.allowUnfree = true;
 
   networking.networkmanager.enable = true;
