@@ -11,6 +11,8 @@
         options = [ "defaults" "nofail" ];
     };
 
+    hardware.graphics.enable = true;
+
     # For lact and overclocking
     hardware.amdgpu.overdrive.enable = true;
     boot.kernelParams = [ "amdgpu.ppfeaturemask=0xffffffff" ];

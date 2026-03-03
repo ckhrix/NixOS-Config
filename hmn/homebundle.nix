@@ -6,6 +6,7 @@
         ./files/desktopentries/scriptfoldericon.nix
         ./files/desktopentries/desktopfoldericon.nix
         ./files/desktopentries/openrgbautostartdesktop.nix
+        ./files/desktopentries/edhm.nix
 
         ./files/scripts/live_gamma.nix # Only works on X11
         ./files/scripts/set_gamma.nix # Only works on X11

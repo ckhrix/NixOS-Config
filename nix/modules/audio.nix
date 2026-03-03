@@ -18,21 +18,26 @@
           "default.clock.max-quantum" = 2048;
         };
       };
-      "10-no-idle" = {
-        "context.properties" = {
-          "default.clock.min-quantum" = 64;
-          "log.level" = 2;
-          "session.suspend-timeout-seconds" = 0;
+        "10-no-idle" = {
+          "context.properties" = {
+            "default.clock.min-quantum" = 64;
+            "log.level" = 2;
+            "session.suspend-timeout-seconds" = 0;
+          };
         };
       };
     };
-  };
 
-  services.pipewire.wireplumber.extraConfig = {
+    services.pipewire.wireplumber.extraConfig = {
     "10-disable-suspension" = {
       "monitor.alsa.rules" = [
         {
-          matches = [ { "node.name" = "~alsa_output.*"; } ];
+          matches = [
+            {
+              # Targets only the FiiO BTR15 specifically
+              "node.name" = "alsa_output.usb-GuangZhou_FIIO_Electronics_Co._Ltd_FIIO_BTR15-00.analog-stereo";
+            }
+          ];
           actions = {
             update-props = {
               "session.suspend-timeout-seconds" = 0;

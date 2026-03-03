@@ -21,6 +21,7 @@ in {
   programs.firefox.enable = true;
   programs.steam.enable = true;
   programs.coolercontrol.enable = true;
+  programs.nix-ld.enable = true;
 
   environment.systemPackages = with pkgs; [
     # System
@@ -37,6 +38,7 @@ in {
     protonvpn-gui
     qbittorrent
     ddcutil
+    steam-run
 
     # Gaming
     osu-lazer-bin
@@ -46,7 +48,6 @@ in {
     heroic
     protontricks
     strawberry
-    opentabletdriver
     wootility
     wooting-udev-rules
 
@@ -73,4 +74,11 @@ in {
     powerline-fonts
     powerline-symbols
   ];
+
+  systemd.user.services.opentabletdriver = {
+    unitConfig = {
+      After = [ "graphical-session.target" ];
+      Requisite = [ "graphical-session.target" ];
+    };
+  };
 }
