@@ -1,7 +1,5 @@
 {
     imports = [
-        ./iconfixer.nix
-
         ./files/desktopentries/osulazer.nix
         ./files/desktopentries/livegammadesktop.nix
         ./files/desktopentries/setgammadesktop.nix

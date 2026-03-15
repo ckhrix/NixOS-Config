@@ -11,7 +11,10 @@
         options = [ "defaults" "nofail" ];
     };
 
-    hardware.graphics.enable = true;
+    hardware.graphics = {
+        enable = true;
+        enable32Bit = true; # MANDATORY for Assetto Corsa
+    };
 
     # For lact and overclocking
     hardware.amdgpu.overdrive.enable = true;

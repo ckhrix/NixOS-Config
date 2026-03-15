@@ -6,6 +6,7 @@ let
         };
 in {
     services.desktopManager.plasma6.enable = true;
+    environment.pathsToLink = [ "/share/icons" "/share/applications" ];
     services.displayManager.sddm = {
         enable = true;
         #theme = "sddm-astronaut-theme";
@@ -46,6 +47,8 @@ in {
         kdePackages.konsole
         kdePackages.dolphin
         #sddm-astronaut
+
+        hicolor-icon-theme
     ];
 
 

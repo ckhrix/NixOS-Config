@@ -15,7 +15,7 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      rbnixdesk = "sudo nixos-rebuild switch --flake /home/ckhrix/NixOS#nixdesktop && systemctl restart --user plasma-plasmashell";
+      rbnixdesk = "sudo nixos-rebuild switch --flake /home/ckhrix/NixOS#nixdesktop";
       rbnixlap = "sudo nixos-rebuild switch --flake /home/ckhrix/NixOS#nixlaptop";
       ff = "fastfetch";
       gc = "nix-collect-garbage -d";

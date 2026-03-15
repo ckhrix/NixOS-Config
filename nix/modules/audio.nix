@@ -34,7 +34,6 @@
         {
           matches = [
             {
-              # Targets only the FiiO BTR15 specifically
               "node.name" = "alsa_output.usb-GuangZhou_FIIO_Electronics_Co._Ltd_FIIO_BTR15-00.analog-stereo";
             }
           ];

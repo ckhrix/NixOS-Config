@@ -10,6 +10,7 @@ in {
   networking.networkmanager.enable = true;
 
   hardware.bluetooth.enable = true;
+  hardware.steam-hardware.enable = true;
   hardware.opentabletdriver.enable = true;
   hardware.opentabletdriver.daemon.enable = true;
   hardware.wooting.enable = true;
@@ -17,6 +18,7 @@ in {
   services.printing.enable = true;
   services.hardware.openrgb.enable = true;
   services.lact.enable = true;
+  services.blueman.enable = true;
 
   programs.firefox.enable = true;
   programs.steam.enable = true;
@@ -50,6 +52,7 @@ in {
     strawberry
     wootility
     wooting-udev-rules
+    protonup-qt
 
     # Creative
     cameractrls
