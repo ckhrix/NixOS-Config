@@ -18,7 +18,7 @@ in {
   services.printing.enable = true;
   services.hardware.openrgb.enable = true;
   services.lact.enable = true;
-  services.blueman.enable = true;
+  #services.blueman.enable = true;
 
   programs.firefox.enable = true;
   programs.steam.enable = true;
@@ -41,6 +41,7 @@ in {
     qbittorrent
     ddcutil
     steam-run
+    cameractrls
 
     # Gaming
     osu-lazer-bin
@@ -53,6 +54,8 @@ in {
     wootility
     wooting-udev-rules
     protonup-qt
+    r2modman
+    prismlauncher
 
     # Creative
     cameractrls
