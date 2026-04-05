@@ -37,7 +37,7 @@ in {
     lact
     openrgb
     qpwgraph
-    protonvpn-gui
+    proton-vpn
     qbittorrent
     ddcutil
     steam-run
