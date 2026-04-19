@@ -42,6 +42,7 @@ in {
     ddcutil
     steam-run
     cameractrls
+    cameractrls-gtk4
 
     # Gaming
     osu-lazer-bin
